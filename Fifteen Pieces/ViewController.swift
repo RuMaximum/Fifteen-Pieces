@@ -9,17 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var squareView: UIView!
+    
+    @IBOutlet weak var imageY: UIImageView!
+    
+    var panGesture = UIPanGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.draggedView(_:)))
+        imageY.isUserInteractionEnabled = true
+        imageY.addGestureRecognizer(panGesture)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
+    @objc func draggedView(_ sender:UIPanGestureRecognizer){
+        self.view.bringSubview(toFront: imageY)
+        let translation = sender.translation(in: self.view)
+        imageY.center = CGPoint(x: imageY.center.x + translation.x, y: imageY.center.y + translation.y)
+        sender.setTranslation(CGPoint.zero, in: self.view)
+    }
 }
-
