@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="-275"/>
+            <point key="canvasLocation" x="482" y="-332"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="ZsS-iZ-wq2">
@@ -60,7 +60,7 @@
         <!--Game-->
         <scene sceneID="pSF-A3-6cU">
             <objects>
-                <viewController title="Game" id="QRl-AO-nI7" customClass="TabBarItemGame" customModule="Fifteen_Pieces" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game" id="QRl-AO-nI7" customClass="ViewControllerGame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVZ-rK-pVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,9 +341,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QRl-AO-nI7" kind="relationship" relationship="viewControllers" id="qIf-5d-5i0"/>
                         <segue destination="AwC-YC-QmX" kind="relationship" relationship="viewControllers" id="wWZ-w5-biO"/>
                         <segue destination="PJR-5o-499" kind="relationship" relationship="viewControllers" id="AcP-mU-Xsh"/>
+                        <segue destination="QRl-AO-nI7" kind="relationship" relationship="viewControllers" id="fSF-bo-WTU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddL-53-x50" userLabel="First Responder" sceneMemberID="firstResponder"/>

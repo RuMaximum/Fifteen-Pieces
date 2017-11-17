@@ -32,7 +32,7 @@ class TabBarItemGame: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        risuemMainPole(view: gameBoardView) //рисую поле
+        drawMainPlayingField(view: gameBoardView) //рисую поле
         self.view.backgroundColor = UIColor.white
         //вызов функции которая рисует пятнашки (точнее задает их начальную точку и размер, как и с полем)
         viewPaiceDraw(view: view1, i: 1)
@@ -80,7 +80,7 @@ class TabBarItemGame: UIViewController {
         
     }
     // рисую главный квадрат(поле)
-    func risuemMainPole(view: UIView) {
+    func drawMainPlayingField(view: UIView) {
         let width = self.view.frame.width
         let yPoint = self.view.center.y + (width + 20.0) / 2
         view.frame = CGRect(x: 20, y: Int(yPoint), width: Int(width - 40.0), height: Int(width - 40.0))
@@ -128,7 +128,7 @@ class TabBarItemGame: UIViewController {
         if pointView16.x == pointView.x || pointView16.y == pointView.y{
             if x < distance && y < distance {
                 // это сама анимация
-                UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                     self.view16.center = pointView
                     sender.view?.center = pointView16
                 }, completion: { finished in
