@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarItemGame: UIViewController {
+class ViewControllerGame: UIViewController {
 
     
     @IBOutlet weak var gameBoardView: UIView!
@@ -66,8 +66,8 @@ class TabBarItemGame: UIViewController {
         view.frame = CGRect(x: pointFoView(i: i).x, y: pointFoView(i: i).y, width: width, height: height)
         
         // отображаемый номер фишки
-        let numberFishki = CGRect(x: 0, y: 0, width: width, height: height)
-        let numberLabel = UILabel(frame: numberFishki)
+        let numberPaice = CGRect(x: 0, y: 0, width: width, height: height)
+        let numberLabel = UILabel(frame: numberPaice)
         
         view.layer.cornerRadius = 10 // скругляем углы фишек
         
