@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         
         let gameBoard = Board(rows: 4, columns: 4)
         let gbView = gameBoard.printBoard(view: self.view)
@@ -19,10 +23,16 @@ class ViewController: UIViewController {
         for piece in gameBoard.pieces {
             piece.printPiece(boardView: gbView)
         }
+        
     }
+    
+
+    
+    //MARK: - MemoryWarning
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
+        
     }
-    
 }
