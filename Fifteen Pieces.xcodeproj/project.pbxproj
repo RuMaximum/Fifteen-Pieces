@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500452E11FC1F30C00443F12 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500452E01FC1F30C00443F12 /* TabBarViewController.swift */; };
 		507AC36F1FC088BF007D9223 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507AC36E1FC088BF007D9223 /* Board.swift */; };
 		50E688871FB9F0F300DD03A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E688861FB9F0F300DD03A6 /* AppDelegate.swift */; };
 		50E688891FB9F0F300DD03A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E688881FB9F0F300DD03A6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500452E01FC1F30C00443F12 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		507AC36E1FC088BF007D9223 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		50E688831FB9F0F300DD03A6 /* Fifteen Pieces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fifteen Pieces.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E688861FB9F0F300DD03A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				50E688861FB9F0F300DD03A6 /* AppDelegate.swift */,
 				50E688881FB9F0F300DD03A6 /* ViewController.swift */,
 				507AC36E1FC088BF007D9223 /* Board.swift */,
+				500452E01FC1F30C00443F12 /* TabBarViewController.swift */,
 				50E6888A1FB9F0F300DD03A6 /* Main.storyboard */,
 				50E688901FB9F0F300DD03A6 /* Assets.xcassets */,
 				50E688921FB9F0F300DD03A6 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				507AC36F1FC088BF007D9223 /* Board.swift in Sources */,
 				50E6888F1FB9F0F300DD03A6 /* Fifteen_Pieces.xcdatamodeld in Sources */,
 				50E688891FB9F0F300DD03A6 /* ViewController.swift in Sources */,
+				500452E11FC1F30C00443F12 /* TabBarViewController.swift in Sources */,
 				50E688871FB9F0F300DD03A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

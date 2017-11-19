@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="195.6521739130435" y="892.66304347826099"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="jag-cW-njb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gSD-av-OoD" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gSD-av-OoD" customClass="TabBarViewController" customModule="Fifteen_Pieces" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Jk-1E-CiI">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

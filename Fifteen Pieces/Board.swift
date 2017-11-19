@@ -42,7 +42,9 @@ final class Board {
         let pieceSide = viewWidth * 0.98
         let rect = CGRect(x: viewWidth * 0.01, y: center.y - pieceSide / 2, width: pieceSide, height: pieceSide)
         let mview = UIView(frame: rect)
-        mview.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        //mview.backgroundColor = #colorLiteral(red: 1, green: 0.8323456645, blue: 0.4732058644, alpha: 1)
+        mview.layer.borderWidth = 1
+        mview.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         mview.layer.masksToBounds = true
         mview.layer.cornerRadius = 10
         view.addSubview(mview)
@@ -59,6 +61,7 @@ final class Piece {
     var positionOnBoard: Int
     let row: Int
     let col: Int
+    //var delegate = UIGestureRecognizerDelegate.self
     
     init(number: Int, positionOnBoard: Int, row: Int, col: Int) {
         
@@ -72,8 +75,8 @@ final class Piece {
     public func printPiece(boardView: UIView) {
         
         let viewWidth = boardView.frame.width
-        let pieceSide = viewWidth * 0.225
-        let offset = viewWidth * 0.02
+        let pieceSide = viewWidth * 0.2375
+        let offset = viewWidth * 0.01
         let rect = CGRect(x: offset * CGFloat(self.col) + pieceSide * CGFloat(self.col - 1), y: CGFloat(self.row) * offset + pieceSide * CGFloat(self.row - 1), width: pieceSide, height: pieceSide)
         
         let mview = UIButton(frame: rect)
@@ -83,6 +86,5 @@ final class Piece {
         mview.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
         
         boardView.addSubview(mview)
-        
     }
 }
