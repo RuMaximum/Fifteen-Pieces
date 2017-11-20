@@ -61,7 +61,6 @@ final class Piece {
     var positionOnBoard: Int
     let row: Int
     let col: Int
-    //var delegate = UIGestureRecognizerDelegate.self
     
     init(number: Int, positionOnBoard: Int, row: Int, col: Int) {
         
@@ -82,6 +81,7 @@ final class Piece {
         let buttonView = UIButton(frame: rect)
         let image = UIImage(named: "Button")
         buttonView.setBackgroundImage(image, for: .normal)
+        buttonView.setBackgroundImage(image, for: .highlighted)
         buttonView.setTitle("\(self.number)", for: .normal)
         buttonView.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
         
