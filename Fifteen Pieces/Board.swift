@@ -71,7 +71,7 @@ final class Piece {
         
     }
     
-    public func printPiece(boardView: UIView) {
+    public func printPiece(boardView: UIView) -> UIButton {
         
         let viewWidth = boardView.frame.width
         let pieceSide = viewWidth * 0.2375
@@ -84,7 +84,9 @@ final class Piece {
         buttonView.setBackgroundImage(image, for: .highlighted)
         buttonView.setTitle("\(self.number)", for: .normal)
         buttonView.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
-        
+        //let pgr = UIPanGestureRecognizer(target: self, action: #selector(dragAndDrop(_:)))
+        //buttonView.addGestureRecognizer(pgr)
         boardView.addSubview(buttonView)
+        return buttonView
     }
 }

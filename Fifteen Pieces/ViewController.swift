@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    var myButton = UIButton()
-    var pgr = UIPanGestureRecognizer()
+    var myButton : UIButton!
+    var mypiece: UIButton!
+    
     
     
     // Слой градиента
@@ -51,7 +52,13 @@ class ViewController: UIViewController {
         
         for piece in gameBoard.pieces {
             if piece.number < 16 {
-                piece.printPiece(boardView: gbView)
+                
+                mypiece = piece.printPiece(boardView: gbView)
+                let pgr = UIPanGestureRecognizer(target: self, action: #selector(self.dragAndDrop(_:)))
+                mypiece.isUserInteractionEnabled = true
+                mypiece.addGestureRecognizer(pgr)
+                
+                
                 print("\(piece.col, piece.row ,piece.positionOnBoard, piece.number)")
             }
         }
@@ -60,16 +67,16 @@ class ViewController: UIViewController {
         // кнопка для перетаскивания
         
         let rectf = CGRect(x: 20, y: 20, width: 200, height: 100)
-        let myButton = UIButton(frame: rectf)
+        myButton = UIButton(frame: rectf)
         myButton.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
         myButton.setTitle("title", for: .normal)
         myButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        //myButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        myButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(myButton)
         
-        let pgr = UIPanGestureRecognizer(target: self, action: #selector(self.dragAndDrop(_:)))
-        myButton.isUserInteractionEnabled = true
-        self.myButton.addGestureRecognizer(pgr)
+        //let pgr = UIPanGestureRecognizer(target: self, action: #selector(self.dragAndDrop(_:)))
+        //myButton.isUserInteractionEnabled = true
+        //self.myButton.addGestureRecognizer(pgr)
         
     }
 
@@ -92,9 +99,9 @@ class ViewController: UIViewController {
     // метод перетаскивания
     
     @objc func dragAndDrop(_ sender: UIPanGestureRecognizer) {
-        self.view.bringSubview(toFront: myButton)
+        self.view.bringSubview(toFront: mypiece)
         let translation = sender.translation(in: self.view)
-        myButton.center = CGPoint(x: myButton.center.x + translation.x, y: myButton.center.y + translation.y)
+        mypiece.center = CGPoint(x: mypiece.center.x + translation.x, y: mypiece.center.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
     
