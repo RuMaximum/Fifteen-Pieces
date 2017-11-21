@@ -45,7 +45,7 @@
         <!--Game-->
         <scene sceneID="pSF-A3-6cU">
             <objects>
-                <viewController title="Game" id="QRl-AO-nI7" customClass="ViewControllerGame" customModule="Fifteen_Pieces" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game" id="QRl-AO-nI7" customClass="ViewControllerGame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVZ-rK-pVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
